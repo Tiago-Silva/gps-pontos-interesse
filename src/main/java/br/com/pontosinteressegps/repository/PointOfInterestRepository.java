@@ -11,10 +11,8 @@ import java.util.List;
 @Repository
 public interface PointOfInterestRepository extends JpaRepository<PointOfInterest, Integer> {
 
-    @Query("" +
-            "SELECT p FROM PointOfInterest p " +
-            "WHERE p.x >= :xMin AND p.x <= :xMax AND p.y >= :yMin AND p.y <= :yMax" +
-        "")
+    @Query("SELECT p FROM PointOfInterest p " +
+            "WHERE p.x >= :xMin AND p.x <= :xMax AND p.y >= :yMin AND p.y <= :yMax")
     List<PointOfInterest> findAllByXBetweenAndYBetween(
             @Param("xMin") int xMin,
             @Param("xMax") int xMax,

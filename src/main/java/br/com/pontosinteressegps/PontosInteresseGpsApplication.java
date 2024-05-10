@@ -18,7 +18,7 @@ public class PontosInteresseGpsApplication implements CommandLineRunner {
     private PointOfInterestRepository repository;
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         this.repository.save(new PointOfInterest("Lanchonete", 27, 12));
         this.repository.save(new PointOfInterest("Posto", 31, 18));
         this.repository.save(new PointOfInterest("Joalheria", 15, 12));
